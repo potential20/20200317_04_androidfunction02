@@ -23,6 +23,12 @@
             android:layout_height="wrap_content"
             android:text="전화 걸기 (Dial)" />
 
+        <Button
+            android:id="@+id/callBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="전화 걸기 (CALL)" />
+
 
 
     </LinearLayout>

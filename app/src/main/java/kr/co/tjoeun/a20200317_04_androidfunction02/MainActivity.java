@@ -48,5 +48,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.callBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                현재까지 배운것만으론 실행 불가 : 권한 획득 X.
+
+                Uri uri = Uri.parse("tel:01051123237");
+                Intent intent = new Intent(Intent.ACTION_CALL,uri);
+                startActivity(intent);
+            }
+        });
+
     }
 }
