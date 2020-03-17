@@ -29,7 +29,18 @@ public class MainActivity extends AppCompatActivity {
 //                어느 화면으로 갈지 => 안드로이드가 요구하는 양식으로 작성 : Uri
 
 //                응용문제 : EditText에 입력한폰번으로 전화 걸도록.
-                Uri uri = Uri.parse("tel:01051123237");
+
+//                1) 전화번호가 뭐라고 입력되어있는지 받아오자
+
+                String phoneNum = binding.phoneNumEdt.getText().toString();
+//                Log.d("입력한폰번". phoneNum); //변수값 확인용
+//                2) 받아온 전화번호로 호출
+//                => Uri.parse()에 들어갈 값을 가공
+//                => tel:전화번호
+
+                String phoneUriStr = String.format("tel:%s",phoneNum);
+
+                Uri uri = Uri.parse(phoneUriStr);
                 Intent intent = new Intent(Intent.ACTION_DIAL, uri);
                 startActivity(intent);
 
