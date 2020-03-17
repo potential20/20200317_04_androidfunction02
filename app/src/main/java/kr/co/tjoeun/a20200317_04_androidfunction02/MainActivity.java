@@ -60,5 +60,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.smsBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Uri uri = Uri.parse("smsto:01051123237");
+                Intent intent = new Intent(Intent.ACTION_SENDTO,uri);
+                intent.putExtra("sms_body","공유 메세지 내용");
+                startActivity(intent);
+
+            }
+        });
+
     }
 }
