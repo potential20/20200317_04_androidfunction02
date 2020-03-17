@@ -72,5 +72,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.webLinkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.naver.com"); // 방문할 인터넷 주소
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
+            }
+        });
+
     }
 }
